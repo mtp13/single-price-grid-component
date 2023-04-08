@@ -7,12 +7,16 @@
 }
 
 body {
-  font-family: "Karla", sans-serif;
   background-color: var(--neutral-light-gray);
+  font-family: "Karla", sans-serif;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .card-grid {
@@ -20,10 +24,6 @@ body {
 }
 
 @media (min-width: 40rem) {
-  body {
-    margin-top: 0;
-    justify-content: center;
-  }
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
