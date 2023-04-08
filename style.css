@@ -1,7 +1,121 @@
+:root {
+  --primary-cyan: hsl(179, 62%, 43%);
+  --primary-bright-yellow: hsl(71, 73%, 54%);
+  --neutral-light-gray: hsl(204, 43%, 93%);
+  --neutral-grayish-blue: hsl(218, 22%, 67%);
+  font-size: 16px;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--neutral-light-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-grid {
+  display: grid;
+}
+
+@media (min-width: 40rem) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 20rem;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-1 {
+  background-color: white;
+  color: var(--neutral-grayish-blue);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-1 h1 {
+  color: var(--primary-cyan);
+}
+
+.card-1 h2 {
+  color: var(--primary-bright-yellow);
+}
+
+.card-2 {
+  background-color: var(--primary-cyan);
+  color: white;
+}
+
+.card-2 a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  border: single solid var(--primary-bright-yellow);
+  background-color: var(--primary-bright-yellow);
+  text-align: center;
+  border-radius: 0.5em;
+  padding: 0.8em;
+}
+
+.card-2 em {
+  font-style: normal;
+  font-size: 2.5rem;
+  color: white;
+  vertical-align: middle;
+}
+
+.card-3 {
+  max-width: 20rem;
+  background-color: #4abebd;
+  color: white;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media (min-width: 40rem) {
+  .card-1 {
+    max-width: 40rem;
+  }
+  .card-2 {
+    border-radius: 0 0 0 0.5rem;
+  }
+  .card-3 {
+    border-radius: 0 0 0.5rem 0;
+  }
+}
+
+.card-3 li {
+  list-style: none;
+}
+
+.card-3 ul {
+  padding: 0;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
